@@ -1,0 +1,18 @@
+Crop:
+    first Create and Image crop with width = W, Height = H for the crop image, assert image. then compare the crop image make sure
+    the height and width will not exceeds the ImageWidth, and ImageHeight. If so, make the new crop W = ImageWidth -x,
+    H = ImageHeight - y; In the for loop getPixelRGB value for the new crop image and SetRPixelGB. In the last step, delete
+    the image and return the cropImage.
+Resize: 
+    First create a RosizeImage with width = newWidth, height = newHeight, assert. Then set scaleXY based on the formula
+    given. Set x2, y2 to the width and height for Resize. SetPixelRGB, delete image,and return Resized Image.
+Watermarker:
+    First assert image, define the watermark's width and height. In the for loop wm_x = x % wm_width; this step
+    is to see if the marker imagei is larger than the image, the GetPixelRGB value for wartermarker image. 
+    if the colors have the value 0 at position x,y in the watermark template image, multiply the RGB pixel values with the 
+    factor 1.45 in the original image at position x,y. Check the RGB pixel and see if they larger than 255, if so the new
+    pixel RGB is 255.
+Brightness and Constrast:
+    First create BnC with ImageWidth and ImageHeight,assert image, in the for loop first get the pixvelvalueRGB, the add
+    brightness vakue into it, and make sure if they are in range [0:255]. The new_pixelvalueRGB = pixelvalueRGB * factor.
+    Check if new_pixelvalueRGB is in range of [0:255]. SetPixelRGB, Delete image, return BnC.
